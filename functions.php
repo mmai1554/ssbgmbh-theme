@@ -14,21 +14,11 @@ define( 'FL_CHILD_THEME_URL', get_stylesheet_directory_uri() );
  */
 define( 'CHILD_THEME_SSBGMBH_VERSION', '1.0.0' );
 
-/**
- * Enqueue styles
- */
-function child_enqueue_styles() {
-
+add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'ssbgmbh-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), CHILD_THEME_SSBGMBH_VERSION, 'all' );
-
-}
-add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
-
-function mi_script() {
 	wp_register_script( 'mncjs', FL_CHILD_THEME_URL . '/js/mnc.js', array('jquery'), false, true);
 	wp_enqueue_script( 'mncjs' );
-}
-add_action( 'wp_enqueue_scripts', 'mi_script' );
+} );
 
 add_shortcode('mi_show_children', function ($atts) {
 
@@ -87,5 +77,14 @@ add_shortcode('mi_show_children', function ($atts) {
     $ls_str .= '</div>';
 
     return $ls_str;
+});
+
+add_shortcode('mnc-vlist-broschueren', function() {
+	/**
+	 * @var WP_Post $post
+	 */
+	global $post;
+	return $post->post_title;
+
 });
 

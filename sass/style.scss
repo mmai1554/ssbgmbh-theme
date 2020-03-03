@@ -61,7 +61,7 @@ $color_rosa: #cc2d63;
 }
 
 .mnc-liste-versicherungen .uabb-blog-post-content {
-  border-bottom: 1px solid #DDD;
+  // border-bottom: 1px solid #DDD;
 }
 
 .mnc-liste-versicherungen .fa-file-pdf {
@@ -70,9 +70,36 @@ $color_rosa: #cc2d63;
   }
 }
 
+.vlist-beitrag {
+  h3 {
+    margin: 30px 0 0 0;
+    font-size: 1.4em;
+  }
+
+  .mnc-fg-container {
+    border: 0;
+    // margin-left:2rem;
+    .mnc-fg-header {
+      margin:10px 0 20px 0;
+      background-color: transparent;
+    }
+    .mnc-fg-content {
+      padding:0;
+    }
+
+    h4 {
+      padding:0;
+      font-size:15px;
+      color: #021654;
+      text-transform: unset;
+    }
+  }
+}
+
 .mnc-excerpt {
-  font-size: 0.9rem;
-  margin-left: 2rem;
+  margin-top: 10px;
+  // font-size: 0.9rem;
+  // margin-left: 2rem;
 }
 
 #menu-header i:before {
