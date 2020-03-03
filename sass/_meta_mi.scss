@@ -1,0 +1,59 @@
+@import "mi_mixins";
+
+.mi_meta {
+  .description {
+    display: none;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    margin: 12px 6px 0;
+  }
+  label span {
+    display: inline;
+    font-weight: normal;
+  }
+  span {
+    color: #999;
+    display: block;
+  }
+  textarea, input[type='text'] {
+    margin-bottom: 3px;
+    width: 99%;
+  }
+  input[type='text'].number {
+    width:50px;
+  }
+  h4 {
+    color: #999;
+    font-size: 1em;
+    margin: 15px 6px;
+    text-transform: uppercase;
+  }
+}
+
+.mm-two-col {
+  overflow: hidden;
+  .mm-col1 {
+    width:20%;
+    float: left;
+  }
+  .mm-col2 {
+    width:70%;
+    float: left;
+  }
+  label {
+    display: inline;
+    padding-right:10px;
+  }
+}
+
+.clearfix {
+  @include mi_clearfix;
+}
+
+.wpa_group {
+  background-color: #EEE!important;
+  padding:10px;
+}
+
