@@ -22,10 +22,8 @@ $color_rosa: #cc2d63;
   }
 
   @include bp(mobile) {
-    #menu-main {
-      display: block;
-    }
-    #menu-main li {
+    display: block;
+    li {
       width: auto;
     }
   }
@@ -80,16 +78,17 @@ $color_rosa: #cc2d63;
     border: 0;
     // margin-left:2rem;
     .mnc-fg-header {
-      margin:10px 0 20px 0;
+      margin: 10px 0 20px 0;
       background-color: transparent;
     }
+
     .mnc-fg-content {
-      padding:0;
+      padding: 0;
     }
 
     h4 {
-      padding:0;
-      font-size:15px;
+      padding: 0;
+      font-size: 15px;
       color: #021654;
     }
   }
